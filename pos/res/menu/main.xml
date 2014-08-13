@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.kr.jsj.test2.MainActivity" >
+
+    <item
+        android:id="@+id/goods_list"
+        android:showAsAction="withText|ifRoom"
+        android:title="상품목록"/>
+    
+    <item
+        android:id="@+id/goods_select"
+        android:showAsAction="withText|ifRoom"
+        android:title="상품선택"/>
+
+</menu>
