@@ -1,16 +1,17 @@
 package co.kr.jsj.test2;
 
-import android.app.Activity;
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,7 +21,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation
@@ -116,6 +116,8 @@ public class NavigationDrawerFragment extends Fragment {
 								getString(R.string.logout),
 								getString(R.string.app_ver) }));
 		mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+		mDrawerListView.setBackgroundColor(Color.argb(220, 237, 112, 124));
+
 		return mDrawerListView;
 	}
 
@@ -279,10 +281,12 @@ public class NavigationDrawerFragment extends Fragment {
 		FragmentTransaction fragmentManager = getFragmentManager()
 				.beginTransaction();
 		if (item.getItemId() == R.id.goods_list) {
-			fragmentManager.replace(R.id.container, new GoodsListActivity()).commit();
+			fragmentManager.replace(R.id.container, new GoodsListActivity())
+					.commit();
 			return true;
 		} else if (item.getItemId() == R.id.goods_select) {
-			fragmentManager.replace(R.id.container, new GoodsActivity()).commit();
+			fragmentManager.replace(R.id.container, new GoodsActivity())
+					.commit();
 			return true;
 		}
 

@@ -2,7 +2,9 @@ package co.kr.jsj.test2;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
@@ -19,7 +21,6 @@ public class MainActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,11 @@ public class MainActivity extends Activity
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
-
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+    
     }
 
     @Override
@@ -41,54 +42,71 @@ public class MainActivity extends Activity
         FragmentTransaction fragmentManager = getFragmentManager().beginTransaction();
 
     	switch (position) {
-        	case 0:   				
+        	case 0:   		
+        		 mTitle = getString(R.string.market_infor);    
         		fragmentManager.replace(R.id.container, new ShopInforActivity());   		
-                fragmentManager.commit();
+        		fragmentManager.commit();
                 break;
             case 1:
+            	 mTitle = getString(R.string.present_conditions);
             	fragmentManager.replace(R.id.container, new SalesListActivity());   		
                 fragmentManager.commit();     
                 break;
             case 2:
+            	mTitle = getString(R.string.environment_setting);
+            	break;
+            case 3:         	
+            	String title = "로그아웃";
+				String msg = "정말로 로그아웃 하시겠습니까?";
+				AlertDialog alert = logoutDialog(title, msg);
+				alert.show();
             	
             	break;
-            case 3:
-            	finish();
-            	break;
             case 4:
+            	mTitle = getString(R.string.app_ver);
             	fragmentManager.replace(R.id.container, new AppVerActivity());   		
                 fragmentManager.commit();
             	break;
         }        
     }
 
-    public void onSectionAttached(int number) {
-    	switch (number) {
-        	case 0:
-                mTitle = getString(R.string.market_infor);        
-                break;
-            case 1:
-                mTitle = getString(R.string.present_conditions);
-                break;
-            case 2:
-            	mTitle = getString(R.string.environment_setting);
-            	break;
-            case 3:
-            	mTitle = getString(R.string.logout);
-            	break;
-            case 4:
-            	mTitle = getString(R.string.app_ver);
-            	break;
-        }
-    }
+    public AlertDialog logoutDialog(String title, String msg) {
 
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+		alert.setTitle(title);
+		alert.setMessage(msg);
+		alert.setPositiveButton("예", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				/**
+				 * 여기에 SharedPreferences를 사용한다
+				 */
+				
+				/*SharedPreferences sp = getSharedPreferences("setLog",
+						MODE_PRIVATE);
+				SharedPreferences.Editor editor = sp.edit();
+				editor.clear();
+				editor.commit();*/
+				finish();
+			}
+		});
+		alert.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+			}
+		});
+
+		AlertDialog dialog = alert.create();
+		return dialog;
+	}
+   
     public void restoreActionBar() {
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

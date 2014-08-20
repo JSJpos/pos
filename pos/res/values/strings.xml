@@ -13,4 +13,7 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">settings</string>
 
+    <!-- 상품목록 -->
+    <string name="hyphen">-</string>
+       
 </resources>
