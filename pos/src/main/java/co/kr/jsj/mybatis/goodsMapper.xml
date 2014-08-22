@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.kr.jsj.mybatis.goodsMapper.xml">
+
+	<!-- 해당 매장 전체 상품정보 -->
+	<select id="getGoodsList" parameterType="int" resultType="GoodsDto">
+		select * from tbl_goods where store_no=#{Store_no}
+	</select>
+	
+	<!-- 상품등록 -->
+	<insert id="insertGoods" parameterType="GoodsDto">
+		insert into tbl_goods (store_no, goods_no, goods_name, goods_price, goods_date, goods_amount, goods_barcode, goods_note)
+		values(#{store_no}, Goods_no.nextVal, #{goods_name}, #{goods_price}, sysdate, #{goods_amount}, #{goods_barcode}, #{goods_note})
+	</insert>
+	
+	<!-- 상품수정 -->
+	<update id="updateGoods" parameterType="GoodsDto">
+		update tbl_goods set goods_name=#{goods_name}, goods_price=#{goods_price}, 
+		goods_amount=#{goods_amount}, goods_barcode=#{goods_barcode}, goods_note=#{goods_note} 
+		where goods_no=#{goods_no} 
+	</update>
+	
+	<!-- 상품삭제 -->
+	<delete id="deleteGoods" parameterType="int">
+		delete from tbl_goods where goods_no=#{Goods_no}
+	</delete>
+	
+</mapper>

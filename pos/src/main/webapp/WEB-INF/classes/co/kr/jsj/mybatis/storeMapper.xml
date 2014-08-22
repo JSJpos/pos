@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.kr.jsj.mybatis.storeMapper.xml">
+
+	<!-- 전체 매장정보 -->
+	<select id="getStoreList" resultType="StoreDto" parameterType="StoreDto">
+		select * from tbl_store
+	</select>
+	
+	<!-- 해당 매장정보 -->
+	<select id="getStoreInfo" parameterType="int" resultType="StoreDto">
+		select * from tbl_store where store_no=#{store_no}
+	</select>
+	
+	<!-- 매장가입 -->
+	<insert id="insertStore" parameterType="StoreDto">
+		insert into tbl_store(Store_no, store_name, store_addr, store_tel1, store_tel2)
+		values (Store_no.nextVal, #{store_name}, #{store_addr},  #{store_tel1},  #{store_tel2})
+	</insert>
+	
+	
+	
+</mapper>
