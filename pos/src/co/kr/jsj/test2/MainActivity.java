@@ -43,24 +43,25 @@ public class MainActivity extends Activity
 
     	switch (position) {
         	case 0:   		
-        		 mTitle = getString(R.string.market_infor);    
+        		mTitle = getString(R.string.market_infor);    
         		fragmentManager.replace(R.id.container, new ShopInforActivity());   		
         		fragmentManager.commit();
                 break;
             case 1:
-            	 mTitle = getString(R.string.present_conditions);
+            	mTitle = getString(R.string.present_conditions);
             	fragmentManager.replace(R.id.container, new SalesListActivity());   		
                 fragmentManager.commit();     
                 break;
             case 2:
             	mTitle = getString(R.string.environment_setting);
+            	fragmentManager.replace(R.id.container, new SettingActivity());   		
+                fragmentManager.commit();
             	break;
             case 3:         	
             	String title = "로그아웃";
 				String msg = "정말로 로그아웃 하시겠습니까?";
 				AlertDialog alert = logoutDialog(title, msg);
 				alert.show();
-            	
             	break;
             case 4:
             	mTitle = getString(R.string.app_ver);

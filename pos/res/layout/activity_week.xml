@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,11 +29,10 @@
             android:padding="5dp" >
 
             <TextView
+                android:id="@+id/pick_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/pick_year"
-                 />
+                android:layout_weight="1" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -43,11 +41,10 @@
                 android:text="년" />
 
             <TextView
+                android:id="@+id/pick_month"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" 
-                android:id="@+id/pick_month"
-                />
+                android:layout_weight="1" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -56,11 +53,10 @@
                 android:text="월" />
 
             <TextView
+                android:id="@+id/pick_day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" 
-                android:id="@+id/pick_day"
-                />
+                android:layout_weight="1" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="#ED707C"
+            android:background="@drawable/button_background"
             android:text="확인"
             android:textColor="#FFFFFF" />
     </LinearLayout>
@@ -91,4 +87,5 @@
             android:layout_height="wrap_content"
             android:text="매출" />
     </LinearLayout>
+
 </LinearLayout>

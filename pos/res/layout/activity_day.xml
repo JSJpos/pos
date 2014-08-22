@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="년" />
+                android:text="@string/year" />
 
             <TextView
                 android:id="@+id/pick_month"
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="월" />
+                android:text="@string/month" />
 
             <TextView
                 android:id="@+id/pick_day"
@@ -62,15 +62,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="일" />
+                android:text="@string/day" />
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:background="#ED707C"
-            android:text="확인"
+            android:background="@drawable/button_background"
+            android:text="@string/confirm"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 
@@ -85,7 +85,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="매출" />
+            android:text="@string/sales" />
     </LinearLayout>
 
 </LinearLayout>

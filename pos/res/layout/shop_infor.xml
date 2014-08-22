@@ -43,18 +43,17 @@
             android:layout_weight="1"
             android:background="@drawable/goods_select_border"
             android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp" >
+            android:paddingBottom="5dp" >
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:text="매장명"
-                android:textSize="15sp" />
+                android:background="@drawable/goods_list_name"
+                android:gravity="center"
+                android:text="매 장 명"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/sales_name"
@@ -62,7 +61,7 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="매장이름"
+                android:text="중앙HTA 상회"
                 android:textSize="25sp" />
 
             <EditText
@@ -110,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="업종입니다." />
+                    android:text="편의점" />
 
                 <Spinner
                     android:id="@+id/sales_edit_type"
@@ -137,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="매장주소입니다." />
+                    android:text="서울시 종로구 창동 149" />
 
                 <EditText
                     android:id="@+id/sales_edit_addr"
@@ -164,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="매장전화번호1 입니다." />
+                    android:text="02-225-2587" />
 
                 <EditText
                     android:id="@+id/sales_edit_tel1"
@@ -191,7 +190,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="매장전화번호2 입니다." />
+                    android:text="등록 되지 않았습니다." />
 
                 <EditText
                     android:id="@+id/sales_edit_tel2"
@@ -214,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:background="#ED707C"
+               android:background="@drawable/button_background"
                 android:text="수정"
                 android:textColor="#ffffff" />
 
@@ -222,21 +221,20 @@
                 android:id="@+id/sales_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="#ED707C"
-                android:text="확인"
-                android:textColor="#ffffff"
-                android:visibility="gone"
                 android:layout_marginBottom="5dp"
-                 />
+                android:layout_marginLeft="5dp"
+              android:background="@drawable/button_background"
+                android:text="@string/confirm"
+                android:textColor="#ffffff"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/sales_reset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:background="#ED707C"
-                android:text="취소"
+               android:background="@drawable/button_background"
+                android:text="@string/reset"
                 android:textColor="#ffffff"
                 android:visibility="gone" />
         </LinearLayout>

@@ -1,197 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:baselineAligned="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:baselineAligned="false"
     android:orientation="horizontal" >
-    
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_weight="1" 
-	    android:orientation="vertical"
-	    android:layout_margin="10dp" >
-	    
-	    <LinearLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:layout_weight="9"
-		    android:orientation="horizontal"
-		    android:background="@drawable/goods_select_border" >
-		    
-	        <LinearLayout 
-	            android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:layout_weight="1"
-			    android:gravity="center" >
-			    
-	            <TextView 
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="선택"/>
-	            
-	        </LinearLayout>
-	        
-	        <LinearLayout 
-	            android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:layout_weight="1"
-			    android:gravity="center" >
-        
-		        <TextView 
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="No" />
-	        
-	        </LinearLayout>
-	        
-	        <LinearLayout 
-	            android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:layout_weight="1"
-			    android:gravity="center" >
-        
-		        <TextView 
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="상품명" />
-	        
-	        </LinearLayout>
-        
-	        <LinearLayout 
-	            android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:layout_weight="1"
-			    android:gravity="center" >
-	        
-		        <TextView 
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="수량" />
-        
-		    </LinearLayout>
-		    
-	        <LinearLayout 
-	            android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:layout_weight="1"
-			    android:gravity="center" >
-		        
-		        <TextView 
-				    android:layout_width="wrap_content"
-				    android:layout_height="wrap_content"
-				    android:text="비고"/>
-		        
-	        </LinearLayout>
-	        
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:background="@drawable/goods_list_name"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상품명"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가격"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수량"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비고"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
         </LinearLayout>
-	        
-	    <LinearLayout
-	        android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:layout_weight="1"
-		    android:background="@drawable/goods_select_border" >
-	        
-	        <ListView 
-	            android:id="@+id/goods_list_listview"
-		        android:layout_width="match_parent"
-			    android:layout_height="match_parent" />
-	        
-	    </LinearLayout>
-	        
-	</LinearLayout>
-	    
-	
-	<LinearLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_weight="3"
-	    android:orientation="vertical">
-	    
-	    <LinearLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:layout_weight="1"
-		    android:gravity="center"
-		    android:orientation="horizontal">
-		    
-	        <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-	        
-		    <Button 
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:layout_weight="1"
-			    android:layout_gravity="center_vertical"
-			    android:background="#ED707C"
-		        android:textColor="#ffffff"
-			    android:text="상품등록" />
-		    
-	        <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-	        
-	    </LinearLayout>
-	    
-	    <LinearLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:layout_weight="1"
-		    android:gravity="center"
-		    android:orientation="horizontal">
-		    
-	        <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-	        
-		    <Button 
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:layout_weight="1"
-			    android:layout_gravity="center_vertical"
-			    android:background="#ED707C"
-		        android:textColor="#ffffff"
-			    android:text="상품수정" />
-		    
-		    <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-		    
-		</LinearLayout>
-	    
-	    <LinearLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:layout_weight="1"
-		    android:gravity="center"
-		    android:orientation="horizontal" >
-		    
-	        <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-	        
-		    <Button 
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:layout_weight="1"
-			    android:layout_gravity="center_vertical"
-			    android:background="#ED707C"
-		        android:textColor="#ffffff"
-			    android:text="상품삭제" />
-		    
-		    <Space 
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-	            android:layout_weight="5" />
-	    
-	    </LinearLayout>
-	    
-	</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/goods_list" >
+
+            <ListView
+                android:id="@+id/goods_list_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <Button
+                android:id="@+id/goods_insert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="상품등록"
+                android:textColor="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+             >
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="상품수정"
+                android:id="@+id/goods_update"
+                android:textColor="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" 
+            android:visibility="invisible"
+            >
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <Button
+                android:id="@+id/goods_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="상품삭제"
+                android:textColor="#ffffff" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

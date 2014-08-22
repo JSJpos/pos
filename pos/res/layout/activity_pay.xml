@@ -8,39 +8,44 @@
     <TableRow
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
- >
+        android:orientation="horizontal" >
 
         <Button
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" 
-            android:text="Cash"
-        android:layout_weight="1"
-            />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" 
-            android:text="Card"
-        android:layout_weight="1"
-            />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" 
-            android:text="Gift Card"
-        android:layout_weight="1"
-            />
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:text="Cash" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:text="Card" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
+            android:text="Gift Card" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
             android:text="T-Money" />
-
     </TableRow>
-
- 
 
 </TableLayout>

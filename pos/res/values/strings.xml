@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">test2</string>
+    <string name="app_name">BarPos</string>
     <string name="market_infor">매장정보</string>
     <string name="goods_list">상품목록</string>
     <string name="present_conditions">매출현황</string>
@@ -15,5 +15,21 @@
 
     <!-- 상품목록 -->
     <string name="hyphen">-</string>
-       
+    <string name="year">년</string>
+    <string name="month">월</string>
+    <string name="day">일</string>
+    <string name="confirm">확인</string>
+    <string name="reset">취소</string>
+    <string name="sales">매출</string>
+    <string name="goods_name">상품명</string>
+    <string name="goods_name_select">상품명을 정해주세요.</string>
+    <string name="goods_price">상품가격</string>
+    <string name="goods_price_select">상품 가격을 정해주세요.</string>
+    <string name="goods_amount">수량</string>
+    <string name="goods_amount_select">수량을 정해주세요.</string>
+    <string name="barcode_name">바코드명</string>
+    <string name="goods_barcode_name_select">바코드를 등록해주세요.</string>
+    <string name="barcode_insert">바코드 등록</string>
+    <string name="goods_insert">상품 등록</string>
+    <string name="note">비고</string>
 </resources>
